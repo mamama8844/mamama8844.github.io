@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    文の種類｜英文法｜EIUKA
+  </title>
+
+  <meta
+    name="description"
+    content="EIUKAの英文法・文の種類の単元ページです。いろいろな疑問文、否定疑問文、付加疑問文、感嘆文を学べます。"
+  >
+
+  <style>
+
+    /* ========================================
+       基本設定
+    ======================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --orange: #ff6f18;
+      --orange-dark: #e85c00;
+      --orange-light: #fff2e7;
+
+      --blue: #2110ba;
+      --blue-dark: #160a88;
+      --blue-light: #f3f1ff;
+
+      --black: #202024;
+      --gray: #66666f;
+      --light-gray: #f8f8fa;
+
+      --border: #e8e8ed;
+    }
+
+    body {
+      width: 100%;
+      overflow-x: hidden;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+
+      color: var(--black);
+      background: #ffffff;
+
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,0.97);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      width: 100%;
+      max-width: 1240px;
+
+      height: 92px;
+
+      margin: 0 auto;
+      padding: 0 30px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+
+      flex-shrink: 0;
+    }
+
+    .header-logo img {
+      display: block;
+
+      width: 300px;
+      max-width: 100%;
+
+      height: auto;
+      max-height: 78px;
+
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-menu {
+      list-style: none;
+
+      display: flex;
+      align-items: center;
+
+      gap: 34px;
+    }
+
+    .nav-menu a {
+      font-size: 15px;
+      font-weight: 700;
+
+      color: #303036;
+
+      transition: 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--orange);
+    }
+
+    .nav-menu .lesson-link {
+      padding: 11px 21px;
+
+      border-radius: 10px;
+
+      color: #ffffff;
+
+      background: var(--orange);
+    }
+
+    .nav-menu .lesson-link:hover {
+      color: #ffffff;
+
+      background: var(--orange-dark);
+    }
+
+
+
+    /* ========================================
+       PAGE HERO
+    ======================================== */
+
+    .page-hero {
+      width: 100%;
+
+      padding: 88px 32px 50px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 18% 20%,
+          rgba(255,111,24,0.12),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 82% 70%,
+          rgba(33,16,186,0.09),
+          transparent 32%
+        ),
+
+        linear-gradient(
+          120deg,
+          #ffffff 0%,
+          #fffaf6 52%,
+          #f7f5ff 100%
+        );
+    }
+
+    .page-hero-inner {
+      width: 100%;
+      max-width: 900px;
+
+      margin: 0 auto;
+    }
+
+    .page-label {
+      margin-bottom: 9px;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      letter-spacing: 0.18em;
+
+      color: var(--orange);
+    }
+
+    .page-title {
+      margin-bottom: 17px;
+
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.3;
+
+      color: var(--blue-dark);
+    }
+
+    .page-description {
+      max-width: 760px;
+
+      margin: 0 auto;
+
+      color: var(--gray);
+
+      font-size: 16px;
+      line-height: 2;
+    }
+
+
+
+    /* ========================================
+       BREADCRUMB
+    ======================================== */
+
+    .breadcrumb-wrap {
+      width: 100%;
+
+      background: #ffffff;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .breadcrumb {
+      width: 100%;
+      max-width: 1180px;
+
+      margin: 0 auto;
+      padding: 13px 32px;
+
+      font-size: 12px;
+
+      color: #7a7a82;
+    }
+
+    .breadcrumb a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .breadcrumb span {
+      margin: 0 8px;
+    }
+
+
+
+    /* ========================================
+       LESSON CARDS
+    ======================================== */
+
+    .lesson-section {
+      width: 100%;
+
+      padding: 78px 32px 110px;
+
+      background: #ffffff;
+    }
+
+    .lesson-container {
+      width: 100%;
+      max-width: 1080px;
+
+      margin: 0 auto;
+    }
+
+    .lesson-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 24px;
+    }
+
+    .lesson-card {
+      min-height: 275px;
+
+      padding: 34px 30px;
+
+      display: flex;
+      flex-direction: column;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 8px 30px
+        rgba(30,30,40,0.04);
+
+      transition: 0.25s;
+    }
+
+    .lesson-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #ffd0af;
+
+      box-shadow:
+        0 16px 38px
+        rgba(30,30,40,0.08);
+    }
+
+    .lesson-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 170px;
+      height: 170px;
+
+      right: -60px;
+      bottom: -70px;
+
+      border-radius: 50%;
+
+      background: rgba(255,111,24,0.06);
+    }
+
+    .lesson-number {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 11px;
+
+      font-size: 11px;
+      font-weight: 900;
+
+      letter-spacing: .11em;
+
+      color: var(--orange);
+    }
+
+    .lesson-card h2 {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 13px;
+
+      font-size: 24px;
+
+      color: var(--blue-dark);
+    }
+
+    .lesson-card p {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 28px;
+
+      color: var(--gray);
+
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .lesson-link {
+      position: relative;
+      z-index: 2;
+
+      margin-top: auto;
+
+      display: inline-flex;
+      align-items: center;
+
+      gap: 9px;
+
+      color: var(--orange-dark);
+
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      width: 100%;
+
+      padding: 58px 32px;
+
+      background: #171337;
+
+      color: #c7c5dc;
+    }
+
+    .footer-inner {
+      width: 100%;
+      max-width: 1180px;
+
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      margin-bottom: 7px;
+
+      font-size: 31px;
+      font-weight: 900;
+
+      letter-spacing: 4px;
+
+      color: #ffffff;
+    }
+
+    .footer-tagline {
+      color: #eeeef4;
+    }
+
+    .copyright {
+      margin-top: 30px;
+
+      color: #85819e;
+
+      font-size: 12px;
+    }
+
+
+
+    /* ========================================
+       タブレット
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        height: 78px;
+
+        padding: 0 18px;
+      }
+
+      .header-logo img {
+        width: 215px;
+        max-width: 55vw;
+
+        max-height: 65px;
+      }
+
+      .nav-menu {
+        gap: 15px;
+      }
+
+      .nav-menu li:not(:last-child) {
+        display: none;
+      }
+
+      .nav-menu .lesson-link {
+        padding: 8px 14px;
+
+        font-size: 12px;
+      }
+
+      .page-hero {
+        padding: 70px 22px 42px;
+      }
+
+      .breadcrumb {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .lesson-section {
+        padding: 62px 22px 88px;
+      }
+
+    }
+
+
+
+    /* ========================================
+       スマホ
+    ======================================== */
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        height: 64px;
+
+        padding: 0 12px;
+      }
+
+      .header-logo {
+        min-width: 0;
+      }
+
+      .header-logo img {
+        width: 150px;
+        max-width: 50vw;
+
+        height: auto;
+      }
+
+      .nav-menu .lesson-link {
+        padding: 7px 11px;
+
+        font-size: 11px;
+      }
+
+      .page-hero {
+        padding: 55px 18px 34px;
+      }
+
+      .page-description {
+        font-size: 14px;
+
+        line-height: 1.9;
+      }
+
+      .breadcrumb {
+        padding: 11px 18px;
+
+        font-size: 11px;
+      }
+
+      .lesson-section {
+        padding: 42px 18px 68px;
+      }
+
+      .lesson-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+      }
+
+      .lesson-card {
+        min-height: 0;
+
+        padding: 27px 23px;
+      }
+
+      .lesson-card h2 {
+        font-size: 22px;
+      }
+
+      footer {
+        padding: 48px 22px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a
+      href="index.html"
+      class="header-logo"
+    >
+
+      <img
+        src="eiuka-header.png"
+        alt="EIUKA 英語で合格るオンライン受験塾"
+      >
+
+    </a>
+
+
+    <ul class="nav-menu">
+
+      <li>
+        <a href="index.html#learn">
+          LEARN
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html#materials">
+          FREE MATERIALS
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html#about">
+          ABOUT EIUKA
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="index.html#lesson"
+          class="lesson-link"
+        >
+          ONLINE PRIVATE LESSON
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ========================================
+     HERO
+======================================== -->
+
+<section class="page-hero">
+
+  <div class="page-hero-inner">
+
+    <div class="page-label">
+      SENTENCE TYPES
+    </div>
+
+    <h1 class="page-title">
+      文の種類
+    </h1>
+
+    <p class="page-description">
+      疑問文・付加疑問文・感嘆文など、<br>
+      文の形に関する基本事項を学びます。
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     BREADCRUMB
+======================================== -->
+
+<div class="breadcrumb-wrap">
+
+  <div class="breadcrumb">
+
+    <a href="index.html">
+      HOME
+    </a>
+
+    <span>›</span>
+
+    <a href="grammar.html">
+      英文法
+    </a>
+
+    <span>›</span>
+
+    <a href="grammar-lessons.html">
+      単元別解説
+    </a>
+
+    <span>›</span>
+
+    文の種類
+
+  </div>
+
+</div>
+
+
+
+<!-- ========================================
+     LESSON LIST
+======================================== -->
+
+<section class="lesson-section">
+
+  <div class="lesson-container">
+
+    <div class="lesson-grid">
+
+
+      <a
+        href="grammar-question-forms.html"
+        class="lesson-card"
+      >
+
+        <div class="lesson-number">
+          01 / QUESTION FORMS
+        </div>
+
+        <h2>
+          いろいろな疑問文
+        </h2>
+
+        <p>
+          what / who / which / whose / when / where / why / how など、<br>
+          疑問詞を使ったさまざまな疑問文を学びます。
+        </p>
+
+        <div class="lesson-link">
+          この授業を見る
+          <span>›</span>
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="grammar-negative-questions.html"
+        class="lesson-card"
+      >
+
+        <div class="lesson-number">
+          02 / NEGATIVE QUESTIONS
+        </div>
+
+        <h2>
+          否定疑問文
+        </h2>
+
+        <p>
+          Don't you ～? / Isn't he ～? など、<br>
+          否定の形でたずねる疑問文の作り方と答え方を学びます。
+        </p>
+
+        <div class="lesson-link">
+          この授業を見る
+          <span>›</span>
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="grammar-tag-questions.html"
+        class="lesson-card"
+      >
+
+        <div class="lesson-number">
+          03 / TAG QUESTIONS
+        </div>
+
+        <h2>
+          付加疑問文
+        </h2>
+
+        <p>
+          ～, isn't it? / ～, don't you? など、<br>
+          相手に確認を求める付加疑問文の基本を学びます。
+        </p>
+
+        <div class="lesson-link">
+          この授業を見る
+          <span>›</span>
+        </div>
+
+      </a>
+
+
+
+      <a
+        href="grammar-exclamations.html"
+        class="lesson-card"
+      >
+
+        <div class="lesson-number">
+          04 / EXCLAMATIONS
+        </div>
+
+        <h2>
+          感嘆文
+        </h2>
+
+        <p>
+          What ～! / How ～! を使って、<br>
+          驚きや感動を表す文の作り方を学びます。
+        </p>
+
+        <div class="lesson-link">
+          この授業を見る
+          <span>›</span>
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-logo">
+      <strong>EIUKA</strong>
+    </div>
+
+    <div>
+      英語で合格るオンライン受験塾
+    </div>
+
+    <p class="footer-tagline">
+      英語を武器に志望校へ。
+    </p>
+
+    <div class="copyright">
+      © 2026 EIUKA
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
