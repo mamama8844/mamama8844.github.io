@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATSUSHITA | English Teacher</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic",
+        Meiryo, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.8;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid #e5e7eb;
+      backdrop-filter: blur(8px);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef4ff 100%);
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      width: 100%;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .small-title {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: 1.1;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+      color: #111827;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #6b7280;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 12px 25px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #1d4ed8;
+    }
+
+    section {
+      padding: 100px 24px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: #6b7280;
+      margin-bottom: 45px;
+    }
+
+    .about-text {
+      max-width: 720px;
+      font-size: 17px;
+    }
+
+    .gray {
+      background: #f8fafc;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+    }
+
+    .card-number {
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 45px 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 70px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">MATSUSHITA</div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#materials">Materials</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="small-title">ENGLISH / EDUCATION</div>
+
+      <h1>MATSUSHITA</h1>
+
+      <h2>英語を「なんとなく」から「わかる」へ。</h2>
+
+      <p>
+        英語・大学受験・学ぶことについて。
+        授業だけでは伝えきれないことを、少しずつまとめていく場所です。
+      </p>
+
+      <a class="button" href="#about">About me</a>
+
+    </div>
+  </section>
+
+
+  <section id="about">
+    <div class="container">
+
+      <h2 class="section-title">About</h2>
+      <p class="section-subtitle">このサイトについて</p>
+
+      <div class="about-text">
+        <p>
+          英語を教えています。
+        </p>
+
+        <br>
+
+        <p>
+          英文法や英文読解、大学受験の勉強法などを中心に、
+          「なぜそうなるのか」を大切にしながら、
+          英語を理解するためのコンテンツを発信していきます。
+        </p>
+
+        <br>
+
+        <p>
+          このサイトでは、英語学習の記事や教材などを
+          少しずつ公開していく予定です。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="articles" class="gray">
+    <div class="container">
+
+      <h2 class="section-title">Articles</h2>
+      <p class="section-subtitle">英語・大学受験について</p>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-number">ARTICLE 01</div>
+          <h3>英文をどう読むか</h3>
+          <p>
+            単語を日本語に置き換えるだけではなく、
+            英文の構造を捉えて読むための考え方。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">ARTICLE 02</div>
+          <h3>英文法を学ぶ意味</h3>
+          <p>
+            文法問題を解くためだけではない、
+            読解につながる英文法について考えます。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">ARTICLE 03</div>
+          <h3>受験勉強について</h3>
+          <p>
+            勉強時間、復習、模試との向き合い方など、
+            大学受験の学習について。
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="materials">
+    <div class="container">
+
+      <h2 class="section-title">Materials</h2>
+      <p class="section-subtitle">教材・学習コンテンツ</p>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-number">GRAMMAR</div>
+          <h3>英文法</h3>
+          <p>
+            英文法を体系的に理解するための教材。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">READING</div>
+          <h3>英文読解</h3>
+          <p>
+            構文把握から論理展開まで、英文を読むための教材。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">EXERCISE</div>
+          <h3>演習問題</h3>
+          <p>
+            学習内容を確認するための演習問題。
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 MATSUSHITA
+</footer>
+
+</body>
+</html>
