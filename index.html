@@ -6,10 +6,17 @@
 
   <title>EIUKA｜英語で合格るオンライン受験塾</title>
 
-  <meta name="description"
-        content="EIUKAは、志望校合格を目指す高校生・受験生のためのオンライン受験英語塾です。英文法・英文解釈・長文読解・英作文など、大学受験英語を無料コンテンツとオンライン個別指導で学べます。">
+  <meta
+    name="description"
+    content="EIUKAは、志望校合格を目指す高校生・受験生のためのオンライン受験英語塾です。英文法・英文解釈・長文読解・英作文など、大学受験英語を無料コンテンツとオンライン個別指導で学べます。"
+  >
 
   <style>
+
+    /* =========================
+       RESET
+    ========================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,10 +28,17 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-        "Yu Gothic", Meiryo, sans-serif;
-      color: #2d2926;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+
+      color: #222222;
       background: #ffffff;
       line-height: 1.8;
     }
@@ -32,6 +46,28 @@
     a {
       color: inherit;
     }
+
+
+    /* =========================
+       COLOR
+    ========================= */
+
+    :root {
+      --orange: #ff7417;
+      --orange-dark: #e96300;
+      --orange-light: #fff3e8;
+
+      --blue: #2010bd;
+      --blue-dark: #160a8f;
+      --blue-light: #f1efff;
+
+      --black: #1d1d1f;
+      --gray: #6b7280;
+      --light-gray: #f8f8fa;
+
+      --border: #ececf0;
+    }
+
 
     /* =========================
        HEADER
@@ -41,169 +77,209 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
+
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid #f1e4da;
+
+      border-bottom: 1px solid var(--border);
     }
 
     nav {
       max-width: 1180px;
       margin: auto;
-      padding: 15px 24px;
+
+      padding: 13px 24px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
+    .header-logo {
       text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .logo-main {
-      display: block;
-      font-size: 28px;
+    .header-logo-main {
+      font-size: 27px;
       font-weight: 900;
       letter-spacing: 3px;
-      color: #f57c00;
-      line-height: 1.1;
+
+      color: var(--blue);
     }
 
-    .logo-sub {
-      display: block;
-      margin-top: 3px;
+    .header-logo-sub {
       font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      color: #7c6f66;
+      font-weight: 700;
+      color: #555;
     }
 
     .nav-links {
       list-style: none;
+
       display: flex;
       align-items: center;
-      gap: 27px;
+
+      gap: 26px;
     }
 
     .nav-links a {
       text-decoration: none;
+
       font-size: 14px;
-      font-weight: 500;
-      color: #4b4541;
+      font-weight: 600;
+
+      color: #333;
     }
 
     .nav-links a:hover {
-      color: #f57c00;
+      color: var(--orange);
     }
 
     .nav-button {
-      background: #f57c00;
-      color: #ffffff !important;
       padding: 9px 18px;
-      border-radius: 7px;
+
+      background: var(--orange);
+
+      border-radius: 8px;
+
+      color: #ffffff !important;
     }
 
     .nav-button:hover {
-      background: #e96f00;
+      background: var(--orange-dark);
     }
+
 
     /* =========================
        HERO
     ========================= */
 
     .hero {
-      min-height: 86vh;
+      min-height: 88vh;
+
       display: flex;
       align-items: center;
 
       background:
-        radial-gradient(circle at 82% 25%, #ffe0b2 0%, transparent 31%),
-        radial-gradient(circle at 70% 75%, #fff3e0 0%, transparent 26%),
-        linear-gradient(135deg, #fffdf9 0%, #fff6ec 100%);
+        radial-gradient(
+          circle at 82% 24%,
+          rgba(255, 116, 23, 0.15) 0%,
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 75% 70%,
+          rgba(32, 16, 189, 0.09) 0%,
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #fffaf6 48%,
+          #f8f7ff 100%
+        );
     }
 
     .hero-inner {
       width: 100%;
       max-width: 1180px;
+
       margin: auto;
-      padding: 100px 24px;
+      padding: 85px 24px;
     }
 
-    .hero-label {
-      margin-bottom: 16px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      color: #e56f00;
+    .hero-content {
+      max-width: 760px;
     }
 
-    .hero h1 {
-      font-size: clamp(70px, 12vw, 130px);
-      line-height: 0.95;
-      letter-spacing: 7px;
-      font-weight: 900;
-      color: #f57c00;
-      margin-bottom: 18px;
-    }
+    .hero-logo {
+      display: block;
 
-    .hero-brand-description {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      color: #685c54;
+      width: min(500px, 90%);
+      height: auto;
+
       margin-bottom: 35px;
     }
 
-    .hero h2 {
-      font-size: clamp(27px, 5vw, 46px);
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 53px);
       line-height: 1.35;
-      color: #302923;
-      margin-bottom: 24px;
+
+      color: var(--black);
+
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .accent {
+      color: var(--orange);
     }
 
     .hero-text {
-      max-width: 720px;
+      max-width: 700px;
+
       font-size: 18px;
-      color: #73685f;
+      color: #616161;
     }
 
     .hero-buttons {
-      margin-top: 38px;
       display: flex;
       flex-wrap: wrap;
+
       gap: 14px;
+
+      margin-top: 38px;
     }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
 
     .button-primary,
     .button-secondary {
       display: inline-block;
-      padding: 13px 25px;
-      border-radius: 8px;
+
+      padding: 14px 25px;
+
+      border-radius: 9px;
+
       text-decoration: none;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
+
       transition: 0.2s;
     }
 
     .button-primary {
-      background: #f57c00;
-      color: #ffffff;
+      color: white;
+
+      background: var(--orange);
+
+      box-shadow:
+        0 9px 24px rgba(255, 116, 23, 0.19);
     }
 
     .button-primary:hover {
-      background: #e56f00;
+      background: var(--orange-dark);
       transform: translateY(-2px);
     }
 
     .button-secondary {
-      background: #ffffff;
-      color: #e56f00;
-      border: 1px solid #f2c89e;
+      color: var(--blue);
+
+      background: white;
+
+      border: 1px solid #cbc7ef;
     }
 
     .button-secondary:hover {
+      background: var(--blue-light);
       transform: translateY(-2px);
-      background: #fffaf5;
     }
+
 
     /* =========================
        COMMON
@@ -220,35 +296,45 @@
 
     .section-label {
       margin-bottom: 8px;
+
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 3px;
-      color: #e56f00;
+
+      color: var(--orange);
     }
 
     .section-title {
       margin-bottom: 18px;
+
       font-size: clamp(30px, 5vw, 43px);
       line-height: 1.4;
-      color: #332b26;
+
+      color: var(--blue-dark);
     }
 
     .section-description {
       max-width: 730px;
+
       margin-bottom: 48px;
-      color: #746960;
+
+      color: var(--gray);
+
+      font-size: 16px;
     }
 
-    .gray {
-      background: #fffaf5;
+    .soft {
+      background: #fafafa;
     }
+
 
     /* =========================
        ABOUT
     ========================= */
 
     .concept {
-      max-width: 800px;
+      max-width: 820px;
+
       font-size: 18px;
     }
 
@@ -257,8 +343,9 @@
     }
 
     .concept strong {
-      color: #e56f00;
+      color: var(--orange);
     }
+
 
     /* =========================
        LEARN
@@ -266,75 +353,151 @@
 
     .cards {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 23px;
     }
 
     .card {
+      position: relative;
+
       height: 100%;
+
       padding: 31px;
+
       background: #ffffff;
-      border: 1px solid #f0dfd2;
-      border-radius: 14px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 16px;
+
       transition: 0.25s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(210, 105, 20, 0.10);
-      border-color: #f5c99f;
+
+      border-color: #ffcba8;
+
+      box-shadow:
+        0 16px 40px rgba(50, 35, 20, 0.08);
     }
 
     .card-number {
       margin-bottom: 13px;
+
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 2px;
-      color: #e56f00;
+
+      color: var(--orange);
     }
 
     .card h3 {
       margin-bottom: 13px;
-      font-size: 21px;
-      color: #332b26;
+
+      font-size: 22px;
+
+      color: var(--blue-dark);
     }
 
     .card p {
       font-size: 15px;
-      color: #756a62;
+      color: #6c6c72;
     }
 
+    .coming-soon {
+      display: inline-block;
+
+      margin-top: 18px;
+      padding: 4px 9px;
+
+      border-radius: 20px;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      color: #777;
+
+      background: #f1f1f3;
+    }
+
+
     /* =========================
-       FREE CONTENT
+       FREE MATERIALS
     ========================= */
 
     .free-area {
-      padding: 55px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #f57c00, #ff9d32);
+      position: relative;
+      overflow: hidden;
+
+      padding: 58px;
+
+      border-radius: 20px;
+
       color: white;
-      box-shadow: 0 18px 50px rgba(245, 124, 0, 0.16);
+
+      background:
+        linear-gradient(
+          120deg,
+          var(--orange) 0%,
+          #ff942f 100%
+        );
+
+      box-shadow:
+        0 20px 55px rgba(255, 116, 23, 0.18);
+    }
+
+    .free-area::after {
+      content: "";
+
+      position: absolute;
+      width: 250px;
+      height: 250px;
+
+      right: -70px;
+      top: -70px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.12);
     }
 
     .free-area .section-label {
-      color: #fff0df;
+      color: #fff3e9;
     }
 
     .free-area h2 {
       margin-bottom: 18px;
-      font-size: 34px;
+
+      font-size: clamp(28px, 5vw, 38px);
+
+      position: relative;
+      z-index: 1;
     }
 
     .free-area p {
       max-width: 720px;
+
       margin-bottom: 28px;
-      color: #fff5eb;
+
+      color: #fff8f2;
+
+      position: relative;
+      z-index: 1;
     }
 
     .free-area .button-secondary {
       border: none;
-      color: #e56f00;
+
+      color: var(--orange-dark);
+
+      position: relative;
+      z-index: 1;
     }
+
 
     /* =========================
        PRIVATE LESSON
@@ -342,9 +505,16 @@
 
     .lesson-grid {
       display: grid;
+
       grid-template-columns: 1.25fr 0.75fr;
+
       gap: 55px;
+
       align-items: center;
+    }
+
+    .lesson-intro {
+      color: #555b65;
     }
 
     .lesson-list {
@@ -358,20 +528,48 @@
 
     .lesson-box {
       padding: 38px;
-      background: #fff0df;
-      border-radius: 15px;
-      border: 1px solid #f7d5b3;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f4f2ff,
+          #fff
+        );
+
+      border: 1px solid #dedaf7;
+
+      border-radius: 17px;
     }
 
     .lesson-box h3 {
       margin-bottom: 15px;
-      color: #d96500;
+
+      color: var(--blue);
     }
 
     .lesson-box p {
       margin-bottom: 15px;
-      color: #6f6259;
+
+      color: #656170;
     }
+
+    .preparing {
+      display: inline-block;
+
+      margin-bottom: 18px;
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      background: var(--orange-light);
+
+      color: var(--orange-dark);
+
+      font-size: 11px;
+      font-weight: 900;
+    }
+
 
     /* =========================
        MESSAGE
@@ -379,7 +577,13 @@
 
     .message {
       text-align: center;
-      background: #fffaf5;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8f2,
+          #f6f5ff
+        );
     }
 
     .message-inner {
@@ -389,14 +593,22 @@
 
     .message h2 {
       margin-bottom: 22px;
+
       font-size: clamp(30px, 5vw, 44px);
-      color: #e56f00;
+
+      color: var(--blue-dark);
+    }
+
+    .message h2 span {
+      color: var(--orange);
     }
 
     .message p {
       font-size: 18px;
-      color: #746960;
+
+      color: #65656b;
     }
+
 
     /* =========================
        FOOTER
@@ -404,32 +616,50 @@
 
     footer {
       padding: 60px 24px;
-      background: #35271e;
-      color: #cdb9aa;
+
+      color: #bdbdcc;
+
+      background: #171437;
     }
 
     .footer-inner {
       max-width: 1080px;
+
       margin: auto;
     }
 
     .footer-logo {
       margin-bottom: 5px;
-      font-size: 30px;
+
+      font-size: 31px;
       font-weight: 900;
       letter-spacing: 4px;
-      color: #ff9d32;
+
+      color: white;
+    }
+
+    .footer-logo span {
+      color: var(--orange);
     }
 
     .footer-sub {
       margin-bottom: 25px;
+
       font-size: 12px;
+    }
+
+    .footer-copy {
+      color: #e3e2eb;
     }
 
     .copyright {
       margin-top: 35px;
+
       font-size: 12px;
+
+      color: #85839a;
     }
+
 
     /* =========================
        MOBILE
@@ -437,8 +667,25 @@
 
     @media (max-width: 760px) {
 
+      nav {
+        padding: 12px 18px;
+      }
+
+      .header-logo-main {
+        font-size: 23px;
+      }
+
+      .header-logo-sub {
+        display: none;
+      }
+
       .nav-links li:not(:last-child) {
         display: none;
+      }
+
+      .nav-button {
+        font-size: 12px;
+        padding: 8px 13px;
       }
 
       .hero {
@@ -446,13 +693,17 @@
       }
 
       .hero-inner {
-        padding-top: 85px;
-        padding-bottom: 85px;
+        padding-top: 65px;
+        padding-bottom: 75px;
       }
 
-      .hero h1 {
-        font-size: 62px;
-        letter-spacing: 4px;
+      .hero-logo {
+        width: min(410px, 100%);
+        margin-bottom: 30px;
+      }
+
+      .hero-text {
+        font-size: 16px;
       }
 
       .cards {
@@ -478,6 +729,7 @@
 
 <body>
 
+
 <!-- =========================
      HEADER
 ========================= -->
@@ -486,13 +738,13 @@
 
   <nav>
 
-    <a class="logo" href="index.html">
+    <a class="header-logo" href="index.html">
 
-      <span class="logo-main">
+      <span class="header-logo-main">
         EIUKA
       </span>
 
-      <span class="logo-sub">
+      <span class="header-logo-sub">
         英語で合格るオンライン受験塾
       </span>
 
@@ -535,6 +787,7 @@
 
 <main>
 
+
 <!-- =========================
      HERO
 ========================= -->
@@ -543,46 +796,44 @@
 
   <div class="hero-inner">
 
-    <div class="hero-label">
-      ONLINE UNIVERSITY ENTRANCE EXAM ENGLISH
-    </div>
+    <div class="hero-content">
 
 
-    <h1>
-      EIUKA
-    </h1>
+      <img
+        src="EIUKA.png"
+        alt="EIUKA 英語で合格るオンライン受験塾"
+        class="hero-logo"
+      >
 
 
-    <div class="hero-brand-description">
-      英語で合格るオンライン受験塾
-    </div>
+      <h1>
+        英語を武器に<span class="accent">志望校へ。</span>
+      </h1>
 
 
-    <h2>
-      英語を武器に志望校へ。
-    </h2>
+      <p class="hero-text">
+
+        志望校合格を目指す高校生・受験生のための
+        オンライン英語学習サイト。
+
+        英文法・英文解釈・長文読解・英作文など、
+        大学受験に必要な英語を基礎から実戦まで学べます。
+
+      </p>
 
 
-    <p class="hero-text">
+      <div class="hero-buttons">
 
-      志望校合格を目指す高校生・受験生のための
-      オンライン英語学習サイト。
+        <a class="button-primary" href="#learn">
+          無料で学ぶ
+        </a>
 
-      英文法・英文解釈・長文読解・英作文を、
-      「わかる」から「解ける」へつなげます。
+        <a class="button-secondary" href="#lesson">
+          オンライン個別指導
+        </a>
 
-    </p>
+      </div>
 
-
-    <div class="hero-buttons">
-
-      <a class="button-primary" href="#learn">
-        無料で学ぶ
-      </a>
-
-      <a class="button-secondary" href="#lesson">
-        オンライン個別指導
-      </a>
 
     </div>
 
@@ -600,6 +851,7 @@
 
   <div class="container">
 
+
     <div class="section-label">
       ABOUT EIUKA
     </div>
@@ -611,6 +863,7 @@
 
 
     <div class="concept">
+
 
       <p>
         大学受験英語は、
@@ -639,6 +892,7 @@
         無料で公開していきます。
       </p>
 
+
     </div>
 
   </div>
@@ -651,7 +905,7 @@
      LEARN
 ========================= -->
 
-<section id="learn" class="gray">
+<section id="learn" class="soft">
 
   <div class="container">
 
@@ -668,8 +922,8 @@
 
     <p class="section-description">
 
-      英文法から実戦的な長文読解・英作文まで。
-      大学入試で要求される英語力を、
+      英文法から英文解釈、長文読解、英作文まで。
+      大学入試で必要となる英語力を、
       分野別に学んでいきます。
 
     </p>
@@ -695,6 +949,10 @@
           文法を学びます。
         </p>
 
+        <span class="coming-soon">
+          COMING SOON
+        </span>
+
       </div>
 
 
@@ -713,6 +971,10 @@
           文の骨格・修飾関係・構文を捉え、
           難しい英文を正確に読む力を養います。
         </p>
+
+        <span class="coming-soon">
+          COMING SOON
+        </span>
 
       </div>
 
@@ -733,6 +995,10 @@
           長い英文を読み切る力を身につけます。
         </p>
 
+        <span class="coming-soon">
+          COMING SOON
+        </span>
+
       </div>
 
 
@@ -751,6 +1017,10 @@
           和文英訳から自由英作文まで、
           入試で得点できる英語表現を学びます。
         </p>
+
+        <span class="coming-soon">
+          COMING SOON
+        </span>
 
       </div>
 
@@ -771,6 +1041,10 @@
           大学ごとの出題傾向と攻略法を考えます。
         </p>
 
+        <span class="coming-soon">
+          COMING SOON
+        </span>
+
       </div>
 
 
@@ -789,6 +1063,10 @@
           単語・参考書・復習・学習計画など、
           合格につながる勉強の進め方を考えます。
         </p>
+
+        <span class="coming-soon">
+          COMING SOON
+        </span>
 
       </div>
 
@@ -812,6 +1090,7 @@
 
     <div class="free-area">
 
+
       <div class="section-label">
         FREE MATERIALS
       </div>
@@ -826,7 +1105,7 @@
 
         英文法・英文解釈・長文読解・英作文など、
         大学受験に取り組む高校生・受験生が使える教材を
-        無料で公開していきます。
+        順次無料で公開していきます。
 
         学校や塾に関係なく、
         誰でも利用できます。
@@ -834,9 +1113,10 @@
       </p>
 
 
-      <a class="button-secondary" href="#">
+      <a class="button-secondary" href="#learn">
         無料教材を見る
       </a>
+
 
     </div>
 
@@ -850,7 +1130,7 @@
      PRIVATE LESSON
 ========================= -->
 
-<section id="lesson" class="gray">
+<section id="lesson" class="soft">
 
   <div class="container">
 
@@ -865,12 +1145,13 @@
 
       <div>
 
+
         <h2 class="section-title">
           オンライン個別指導
         </h2>
 
 
-        <p>
+        <p class="lesson-intro">
 
           EIUKAでは、
           無料コンテンツだけでは解決しにくい課題について、
@@ -904,11 +1185,18 @@
 
         </ul>
 
+
       </div>
 
 
 
       <div class="lesson-box">
+
+
+        <span class="preparing">
+          PREPARING
+        </span>
+
 
         <h3>
           個別指導について
@@ -924,6 +1212,7 @@
           対象・料金・指導方法などの詳細は、
           今後このサイトで公開します。
         </p>
+
 
       </div>
 
@@ -944,19 +1233,22 @@
 
   <div class="message-inner">
 
+
     <h2>
-      英語を、合格の武器に。
+      英語を、<span>合格の武器</span>に。
     </h2>
+
 
     <p>
 
       英語が得意な人にも、
       まだ苦手意識がある人にも。
 
-      正しく学べば、
+      正しく学び、正しく使えるようになれば、
       英語は大学受験の大きな武器になります。
 
     </p>
+
 
   </div>
 
@@ -975,21 +1267,26 @@
 
   <div class="footer-inner">
 
+
     <div class="footer-logo">
-      EIUKA
+      <span>EI</span>UKA
     </div>
+
 
     <div class="footer-sub">
       英語で合格るオンライン受験塾
     </div>
 
-    <p>
+
+    <p class="footer-copy">
       英語を武器に志望校へ。
     </p>
+
 
     <div class="copyright">
       © 2026 EIUKA
     </div>
+
 
   </div>
 
