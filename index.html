@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>EIUKA｜英語で合格るオンライン受験塾</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    EIUKA｜英語で合格るオンライン受験塾
+  </title>
 
   <meta
     name="description"
     content="EIUKAは、志望校合格を目指す高校生・受験生のためのオンライン受験英語塾です。英文法・英文解釈・長文読解・英作文など、大学受験英語を無料で学べます。"
   >
 
+
   <style>
 
-    /* =========================
+    /* ========================================
        基本設定
-    ========================= */
+    ======================================== */
 
     * {
       box-sizing: border-box;
@@ -28,21 +34,25 @@
     }
 
     :root {
-      --orange: #ff6f12;
-      --orange-dark: #e95d00;
-      --orange-light: #fff3e9;
 
-      --blue: #2011be;
-      --blue-dark: #160a8c;
-      --blue-light: #f2f0ff;
+      --orange: #ff6f18;
+      --orange-dark: #e85c00;
+      --orange-light: #fff2e7;
 
-      --black: #202020;
+      --blue: #2110ba;
+      --blue-dark: #160a88;
+      --blue-light: #f3f1ff;
+
+      --black: #202024;
       --gray: #66666f;
       --light-gray: #f8f8fa;
+
       --border: #e8e8ed;
+
     }
 
     body {
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -54,269 +64,403 @@
         sans-serif;
 
       color: var(--black);
+
       background: #ffffff;
+
       line-height: 1.8;
+
     }
 
     a {
+
       color: inherit;
       text-decoration: none;
+
     }
 
 
-    /* =========================
-       ヘッダー
-    ========================= */
+
+    /* ========================================
+       HEADER
+    ======================================== */
 
     header {
+
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(12px);
+      background:
+        rgba(255,255,255,0.97);
 
-      border-bottom: 1px solid var(--border);
+      backdrop-filter:
+        blur(12px);
+
+      border-bottom:
+        1px solid var(--border);
+
     }
 
-    .nav {
+
+    .header-inner {
+
       max-width: 1240px;
-      height: 96px;
+
+      height: 92px;
 
       margin: 0 auto;
-      padding: 0 32px;
+
+      padding: 0 30px;
 
       display: flex;
-      align-items: center;
+
       justify-content: space-between;
+
+      align-items: center;
+
     }
 
-    /* 左上のロゴ */
+
+    /* 横長ロゴ */
 
     .header-logo {
+
       display: flex;
+
       align-items: center;
+
+      flex-shrink: 0;
+
     }
 
+
     .header-logo img {
+
       display: block;
 
-      width: 290px;
+      width: 300px;
+
+      height: auto;
+
       max-height: 78px;
 
       object-fit: contain;
+
       object-position: left center;
+
     }
+
 
     /* メニュー */
 
     .nav-menu {
+
       list-style: none;
 
       display: flex;
+
       align-items: center;
-      gap: 38px;
+
+      gap: 34px;
+
     }
+
 
     .nav-menu a {
+
       font-size: 15px;
+
       font-weight: 700;
-      color: #2c2c31;
+
+      color: #303036;
 
       transition: 0.2s;
+
     }
+
 
     .nav-menu a:hover {
+
       color: var(--orange);
+
     }
 
-    .nav-menu .lesson-button {
-      display: inline-block;
 
-      padding: 11px 22px;
+    .nav-menu .lesson-link {
+
+      padding: 11px 21px;
+
+      border-radius: 10px;
 
       color: #ffffff;
 
       background: var(--orange);
 
-      border-radius: 10px;
     }
 
-    .nav-menu .lesson-button:hover {
+
+    .nav-menu .lesson-link:hover {
+
       color: #ffffff;
+
       background: var(--orange-dark);
+
     }
 
 
-    /* =========================
-       ファーストビュー
-    ========================= */
+
+    /* ========================================
+       HERO
+    ======================================== */
 
     .hero {
-      min-height: 650px;
+
+      min-height: 670px;
 
       display: flex;
+
       align-items: center;
 
       background:
+
         radial-gradient(
-          circle at 80% 30%,
-          rgba(255, 111, 18, 0.15),
+          circle at 82% 24%,
+          rgba(255,111,24,0.17),
+          transparent 34%
+        ),
+
+        radial-gradient(
+          circle at 78% 83%,
+          rgba(33,16,186,0.12),
           transparent 35%
         ),
-        radial-gradient(
-          circle at 78% 82%,
-          rgba(32, 17, 190, 0.12),
-          transparent 35%
-        ),
+
         linear-gradient(
-          115deg,
+          120deg,
           #ffffff 0%,
-          #fffaf6 55%,
+          #fffaf6 56%,
           #f7f5ff 100%
         );
+
     }
 
+
     .hero-inner {
+
       width: 100%;
+
       max-width: 1240px;
 
       margin: 0 auto;
 
-      padding: 100px 32px 110px;
+      padding:
+        105px 32px 115px;
+
     }
+
 
     .hero-content {
-      max-width: 700px;
+
+      max-width: 720px;
+
     }
 
-    .hero-label {
+
+    .hero-small {
+
       margin-bottom: 18px;
 
       font-size: 13px;
-      font-weight: 800;
+
+      font-weight: 900;
+
       letter-spacing: 0.16em;
 
       color: var(--blue);
+
     }
+
 
     .hero h1 {
+
       margin-bottom: 28px;
 
-      font-size: clamp(48px, 7vw, 78px);
-      line-height: 1.25;
+      font-size:
+        clamp(50px, 7vw, 78px);
+
+      line-height: 1.22;
 
       font-weight: 900;
-      letter-spacing: -0.02em;
+
+      letter-spacing: -0.03em;
+
     }
+
 
     .hero h1 span {
+
       color: var(--orange);
+
     }
+
 
     .hero-description {
-      max-width: 620px;
+
+      max-width: 650px;
 
       font-size: 18px;
+
       line-height: 2;
 
-      color: #56565e;
+      color: #595961;
+
     }
 
+
     .hero-buttons {
-      margin-top: 38px;
+
+      margin-top: 40px;
 
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 18px;
+
     }
 
-    .button {
-      min-width: 200px;
 
-      padding: 15px 24px;
+    .hero-button {
+
+      min-width: 210px;
+
+      padding: 15px 25px;
 
       display: inline-flex;
+
       justify-content: center;
+
       align-items: center;
 
-      gap: 12px;
+      gap: 13px;
 
       border-radius: 10px;
 
       font-size: 15px;
+
       font-weight: 800;
 
       transition: 0.2s;
+
     }
 
-    .button-primary {
+
+    .hero-button-primary {
+
       color: #ffffff;
 
       background: var(--orange);
 
-      box-shadow: 0 10px 25px rgba(255, 111, 18, 0.18);
+      box-shadow:
+        0 10px 28px
+        rgba(255,111,24,0.19);
+
     }
 
-    .button-primary:hover {
+
+    .hero-button-primary:hover {
+
       background: var(--orange-dark);
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
+
     }
 
-    .button-secondary {
+
+    .hero-button-secondary {
+
       color: var(--blue);
 
       background: #ffffff;
 
-      border: 2px solid var(--blue);
+      border:
+        2px solid var(--blue);
+
     }
 
-    .button-secondary:hover {
+
+    .hero-button-secondary:hover {
+
       background: var(--blue-light);
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
+
     }
 
 
-    /* =========================
-       共通
-    ========================= */
+
+    /* ========================================
+       共通セクション
+    ======================================== */
 
     section {
+
       padding: 100px 32px;
+
     }
+
 
     .container {
+
       max-width: 1180px;
+
       margin: 0 auto;
+
     }
+
 
     .section-heading {
-      text-align: center;
 
       margin-bottom: 55px;
+
+      text-align: center;
+
     }
 
+
     .section-label {
+
       margin-bottom: 8px;
 
       font-size: 13px;
+
       font-weight: 900;
+
       letter-spacing: 0.15em;
 
       color: var(--orange);
+
     }
+
 
     .section-title {
+
       margin-bottom: 14px;
 
-      font-size: clamp(30px, 4vw, 43px);
+      font-size:
+        clamp(30px,4vw,43px);
+
       line-height: 1.4;
 
-      color: var(--black);
     }
 
+
     .section-description {
+
       max-width: 780px;
 
       margin: 0 auto;
@@ -324,195 +468,271 @@
       color: var(--gray);
 
       font-size: 16px;
+
     }
 
 
-    /* =========================
-       学習分野
-    ========================= */
+
+    /* ========================================
+       LEARN
+    ======================================== */
 
     #learn {
+
       background: #ffffff;
+
     }
+
 
     .cards {
+
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3,1fr);
 
       gap: 22px;
+
     }
 
-    .card {
-      min-height: 270px;
 
-      padding: 32px 28px;
+    .card {
+
+      min-height: 260px;
+
+      padding: 31px 28px;
 
       text-align: center;
 
       background: #ffffff;
 
-      border: 1px solid var(--border);
-      border-radius: 16px;
+      border:
+        1px solid var(--border);
 
-      box-shadow: 0 8px 30px rgba(30, 30, 40, 0.035);
+      border-radius: 17px;
+
+      box-shadow:
+        0 8px 30px
+        rgba(30,30,40,0.035);
 
       transition: 0.25s;
+
     }
+
 
     .card:hover {
-      transform: translateY(-5px);
 
-      box-shadow: 0 14px 36px rgba(30, 30, 40, 0.08);
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 16px 38px
+        rgba(30,30,40,0.08);
+
     }
 
-    .card-icon {
-      width: 48px;
-      height: 48px;
 
-      margin: 0 auto 17px;
+    .card-icon {
+
+      width: 50px;
+
+      height: 50px;
+
+      margin:
+        0 auto 17px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
 
       border-radius: 50%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      color: #ffffff;
 
-      color: white;
-
-      font-size: 22px;
       font-weight: 900;
+
+      font-size: 17px;
+
     }
 
-    .orange-icon {
+
+    .icon-orange {
+
       background: var(--orange);
+
     }
 
-    .blue-icon {
-      background: #3376d5;
+
+    .icon-blue {
+
+      background: #3374d1;
+
     }
 
-    .purple-icon {
-      background: #7455da;
+
+    .icon-purple {
+
+      background: #7554d6;
+
     }
 
-    .darkblue-icon {
-      background: #1f7abe;
+
+    .icon-sky {
+
+      background: #1f7cbe;
+
     }
+
 
     .card-number {
+
       margin-bottom: 7px;
 
       font-size: 11px;
+
       font-weight: 900;
-      letter-spacing: 0.08em;
+
+      letter-spacing: .08em;
 
       color: var(--orange);
+
     }
 
-    .card:nth-child(2) .card-number {
-      color: #3376d5;
-    }
-
-    .card:nth-child(3) .card-number {
-      color: #7455da;
-    }
-
-    .card:nth-child(4) .card-number {
-      color: #1f7abe;
-    }
 
     .card h3 {
+
       margin-bottom: 12px;
 
       font-size: 21px;
+
     }
+
 
     .card p {
-      font-size: 14px;
-      line-height: 1.8;
 
       color: var(--gray);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+
     }
 
+
     .coming-soon {
+
       display: inline-block;
 
       margin-top: 16px;
 
       padding: 4px 10px;
 
-      border-radius: 50px;
+      border-radius: 30px;
 
-      background: #f2f2f4;
+      background: #f1f1f4;
 
       color: #777;
 
       font-size: 10px;
+
       font-weight: 800;
+
     }
 
 
-    /* =========================
+
+    /* ========================================
        ABOUT
-    ========================= */
+    ======================================== */
 
     #about {
+
       background: #fffaf6;
+
     }
 
+
     .about-layout {
+
       display: grid;
 
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns:
+        .9fr 1.1fr;
 
       gap: 70px;
 
       align-items: center;
+
     }
 
+
     .about-title {
-      font-size: clamp(34px, 5vw, 51px);
+
+      font-size:
+        clamp(34px,5vw,51px);
+
       line-height: 1.45;
 
       color: var(--blue-dark);
+
     }
+
 
     .about-title span {
+
       color: var(--orange);
+
     }
+
 
     .about-text {
+
       font-size: 17px;
+
       color: #595961;
+
     }
+
 
     .about-text p {
+
       margin-bottom: 22px;
+
     }
+
 
     .about-text strong {
+
       color: var(--orange-dark);
+
     }
 
 
-    /* =========================
+
+    /* ========================================
        無料教材
-    ========================= */
+    ======================================== */
 
     #materials {
+
       background: #ffffff;
+
     }
 
+
     .materials-box {
+
       position: relative;
+
       overflow: hidden;
 
       padding: 65px;
 
-      border-radius: 22px;
+      border-radius: 23px;
 
-      color: white;
+      color: #ffffff;
 
       background:
         linear-gradient(
@@ -521,161 +741,230 @@
           #ff9130
         );
 
-      box-shadow: 0 22px 60px rgba(255, 111, 18, 0.18);
+      box-shadow:
+        0 22px 60px
+        rgba(255,111,24,0.18);
+
     }
 
+
     .materials-box::after {
+
       content: "";
 
       position: absolute;
 
       width: 300px;
+
       height: 300px;
 
       top: -110px;
+
       right: -80px;
 
       border-radius: 50%;
 
-      background: rgba(255,255,255,0.13);
+      background:
+        rgba(255,255,255,0.13);
+
     }
 
+
     .materials-label {
+
       position: relative;
+
       z-index: 2;
 
       margin-bottom: 10px;
 
       font-size: 12px;
+
       font-weight: 900;
-      letter-spacing: 0.15em;
+
+      letter-spacing: .15em;
+
     }
 
+
     .materials-box h2 {
+
       position: relative;
+
       z-index: 2;
 
       margin-bottom: 18px;
 
-      font-size: clamp(29px, 4vw, 42px);
+      font-size:
+        clamp(29px,4vw,42px);
+
     }
 
+
     .materials-box p {
+
       position: relative;
+
       z-index: 2;
 
-      max-width: 720px;
+      max-width: 730px;
 
       margin-bottom: 30px;
 
-      font-size: 16px;
       color: #fff7f0;
+
     }
 
+
     .materials-button {
+
       position: relative;
+
       z-index: 2;
 
       display: inline-block;
 
       padding: 13px 23px;
 
-      color: var(--orange-dark);
-
-      background: white;
-
       border-radius: 9px;
 
+      background: #ffffff;
+
+      color: var(--orange-dark);
+
       font-weight: 800;
+
     }
 
 
-    /* =========================
+
+    /* ========================================
        個別指導
-    ========================= */
+    ======================================== */
 
     #lesson {
+
       background: #f8f7ff;
+
     }
 
+
     .lesson-layout {
+
       display: grid;
 
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns:
+        1.1fr .9fr;
 
       gap: 65px;
 
       align-items: center;
+
     }
+
 
     .lesson-title {
+
       margin-bottom: 20px;
 
-      font-size: clamp(32px, 5vw, 45px);
+      font-size:
+        clamp(32px,5vw,45px);
+
       color: var(--blue-dark);
+
     }
+
 
     .lesson-text {
+
       color: #5e5e67;
-      font-size: 16px;
+
     }
 
+
     .lesson-list {
+
       margin-top: 28px;
 
       padding-left: 22px;
+
     }
+
 
     .lesson-list li {
+
       margin-bottom: 10px;
+
     }
 
+
     .lesson-box {
+
       padding: 42px;
 
       background: #ffffff;
 
-      border: 1px solid #dedaf8;
+      border:
+        1px solid #dedaf8;
+
       border-radius: 18px;
 
-      box-shadow: 0 12px 35px rgba(32, 17, 190, 0.05);
+      box-shadow:
+        0 12px 35px
+        rgba(33,16,186,0.05);
+
     }
 
+
     .lesson-status {
+
       display: inline-block;
 
       margin-bottom: 16px;
 
       padding: 5px 11px;
 
-      color: var(--orange-dark);
-      background: var(--orange-light);
+      border-radius: 30px;
 
-      border-radius: 50px;
+      color: var(--orange-dark);
+
+      background:
+        var(--orange-light);
 
       font-size: 11px;
+
       font-weight: 900;
+
     }
 
+
     .lesson-box h3 {
+
       margin-bottom: 13px;
+
+      color: var(--blue);
 
       font-size: 22px;
 
-      color: var(--blue);
     }
+
 
     .lesson-box p {
-      color: #65656d;
+
       margin-bottom: 12px;
+
+      color: #65656d;
+
     }
 
 
-    /* =========================
+
+    /* ========================================
        MESSAGE
-    ========================= */
+    ======================================== */
 
     .message {
+
       text-align: center;
 
       background:
@@ -684,19 +973,29 @@
           #fff7f0,
           #f4f2ff
         );
+
     }
+
 
     .message h2 {
+
       margin-bottom: 20px;
 
-      font-size: clamp(32px, 5vw, 46px);
+      font-size:
+        clamp(32px,5vw,46px);
+
     }
+
 
     .message h2 span {
+
       color: var(--orange);
+
     }
 
+
     .message p {
+
       max-width: 700px;
 
       margin: 0 auto;
@@ -704,158 +1003,263 @@
       color: var(--gray);
 
       font-size: 17px;
+
     }
 
 
-    /* =========================
+
+    /* ========================================
        FOOTER
-    ========================= */
+    ======================================== */
 
     footer {
+
       padding: 58px 32px;
+
+      background: #171337;
 
       color: #c7c5dc;
 
-      background: #171337;
     }
+
 
     .footer-inner {
+
       max-width: 1180px;
+
       margin: 0 auto;
+
     }
 
+
     .footer-logo {
+
       margin-bottom: 7px;
 
       font-size: 31px;
+
       font-weight: 900;
+
       letter-spacing: 4px;
 
-      color: white;
+      color: #ffffff;
+
     }
+
 
     .footer-logo span {
+
       color: var(--orange);
+
     }
+
 
     .footer-tagline {
+
       color: #eeeef4;
+
     }
 
+
     .copyright {
+
       margin-top: 30px;
 
       color: #85819e;
 
       font-size: 12px;
+
     }
 
 
-    /* =========================
-       スマホ
-    ========================= */
 
-    @media (max-width: 850px) {
+    /* ========================================
+       タブレット・スマホ
+    ======================================== */
 
-      .nav {
+    @media (max-width: 900px) {
+
+      .header-inner {
+
         height: 78px;
+
         padding: 0 18px;
+
       }
+
 
       .header-logo img {
-        width: 205px;
-        max-height: 62px;
+
+        width: 215px;
+
+        max-height: 65px;
+
       }
+
 
       .nav-menu {
+
         gap: 15px;
+
       }
+
 
       .nav-menu li:not(:last-child) {
+
         display: none;
+
       }
 
-      .nav-menu .lesson-button {
+
+      .nav-menu .lesson-link {
+
         padding: 8px 14px;
 
         font-size: 12px;
+
       }
+
 
       .hero {
+
         min-height: auto;
+
       }
+
 
       .hero-inner {
-        padding: 75px 22px 85px;
+
+        padding:
+          80px 22px 90px;
+
       }
+
 
       .hero h1 {
+
         font-size: 48px;
+
       }
+
 
       .hero-description {
+
         font-size: 16px;
+
       }
 
+
       .cards {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          repeat(2,1fr);
+
       }
+
 
       .about-layout,
       .lesson-layout {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
         gap: 38px;
+
       }
+
 
       .materials-box {
-        padding: 40px 25px;
+
+        padding:
+          45px 30px;
+
       }
+
 
       section {
-        padding: 75px 22px;
+
+        padding:
+          80px 22px;
+
       }
 
     }
 
-    @media (max-width: 480px) {
+
+
+    @media (max-width: 600px) {
 
       .header-logo img {
-        width: 175px;
+
+        width: 180px;
+
       }
+
 
       .hero h1 {
-        font-size: 41px;
+
+        font-size: 42px;
+
       }
+
 
       .hero-buttons {
+
         flex-direction: column;
+
       }
 
-      .button {
+
+      .hero-button {
+
         width: 100%;
+
+      }
+
+
+      .cards {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .materials-box {
+
+        padding:
+          38px 24px;
+
       }
 
     }
 
+
   </style>
+
 </head>
+
 
 
 <body>
 
 
-<!-- =========================
+<!-- ========================================
      HEADER
-========================= -->
+======================================== -->
 
 <header>
 
-  <div class="nav">
+  <div class="header-inner">
 
-    <a href="index.html" class="header-logo">
+
+    <a
+      href="index.html"
+      class="header-logo"
+    >
 
       <img
-        src="EIUKA.png"
+        src="英語で合格るオンライン受験塾.png"
         alt="EIUKA 英語で合格るオンライン受験塾"
       >
 
@@ -870,11 +1274,13 @@
         </a>
       </li>
 
+
       <li>
         <a href="#materials">
           無料教材
         </a>
       </li>
+
 
       <li>
         <a href="#about">
@@ -882,13 +1288,18 @@
         </a>
       </li>
 
+
       <li>
-        <a href="#lesson" class="lesson-button">
+        <a
+          href="#lesson"
+          class="lesson-link"
+        >
           個別指導
         </a>
       </li>
 
     </ul>
+
 
   </div>
 
@@ -899,9 +1310,9 @@
 <main>
 
 
-<!-- =========================
+<!-- ========================================
      HERO
-========================= -->
+======================================== -->
 
 <section class="hero">
 
@@ -909,14 +1320,22 @@
 
     <div class="hero-content">
 
-      <div class="hero-label">
+
+      <div class="hero-small">
         ONLINE UNIVERSITY ENTRANCE EXAM ENGLISH
       </div>
 
+
       <h1>
+
         英語を武器に<br>
-        <span>志望校へ。</span>
+
+        <span>
+          志望校へ。
+        </span>
+
       </h1>
+
 
       <p class="hero-description">
 
@@ -924,24 +1343,51 @@
         オンライン英語学習サイト。<br>
 
         英文法・英文解釈・長文読解・英作文など、
-        大学受験に必要な英語を基礎から実戦まで学べます。
+        大学受験に必要な英語を
+        基礎から実戦まで学べます。
 
       </p>
 
 
       <div class="hero-buttons">
 
-        <a href="#learn" class="button button-primary">
+
+        <a
+          href="#learn"
+          class="
+            hero-button
+            hero-button-primary
+          "
+        >
+
           無料で学ぶ
-          <span>›</span>
+
+          <span>
+            ›
+          </span>
+
         </a>
 
-        <a href="#lesson" class="button button-secondary">
+
+        <a
+          href="#lesson"
+          class="
+            hero-button
+            hero-button-secondary
+          "
+        >
+
           オンライン個別指導
-          <span>›</span>
+
+          <span>
+            ›
+          </span>
+
         </a>
+
 
       </div>
+
 
     </div>
 
@@ -951,196 +1397,289 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      LEARN
-========================= -->
+======================================== -->
 
 <section id="learn">
 
   <div class="container">
 
+
     <div class="section-heading">
+
 
       <div class="section-label">
         LEARN
       </div>
 
+
       <h2 class="section-title">
         大学受験英語を学ぶ
       </h2>
 
+
       <p class="section-description">
 
-        英文法から英文解釈、長文読解、英作文まで。
+        英文法から英文解釈、
+        長文読解、英作文まで。
+
         大学入試で必要となる英語力を、
         分野別に学んでいきます。
 
       </p>
 
+
     </div>
+
 
 
     <div class="cards">
 
 
+      <!-- 英文法 -->
+
       <div class="card">
 
-        <div class="card-icon orange-icon">
-          B
+
+        <div class="
+          card-icon
+          icon-orange
+        ">
+          G
         </div>
+
 
         <div class="card-number">
           01 / GRAMMAR
         </div>
 
+
         <h3>
           英文法
         </h3>
 
+
         <p>
+
           文法問題のためだけではなく、
           英文を正確に読み書きするための
           文法を学びます。
+
         </p>
+
 
         <span class="coming-soon">
           COMING SOON
         </span>
 
+
       </div>
 
 
+
+      <!-- 英文解釈 -->
+
       <div class="card">
 
-        <div class="card-icon blue-icon">
-          S
+
+        <div class="
+          card-icon
+          icon-blue
+        ">
+          I
         </div>
+
 
         <div class="card-number">
           02 / INTERPRETATION
         </div>
 
+
         <h3>
           英文解釈
         </h3>
 
+
         <p>
+
           文の骨格・修飾関係・構文を捉え、
           難しい英文を正確に読む力を養います。
+
         </p>
+
 
         <span class="coming-soon">
           COMING SOON
         </span>
 
+
       </div>
 
 
+
+      <!-- 長文読解 -->
+
       <div class="card">
 
-        <div class="card-icon purple-icon">
+
+        <div class="
+          card-icon
+          icon-purple
+        ">
           R
         </div>
+
 
         <div class="card-number">
           03 / READING
         </div>
 
+
         <h3>
           長文読解
         </h3>
 
+
         <p>
+
           段落構成や論理展開を意識しながら、
           長い英文を読み切る力を身につけます。
+
         </p>
+
 
         <span class="coming-soon">
           COMING SOON
         </span>
 
+
       </div>
 
 
+
+      <!-- 英作文 -->
+
       <div class="card">
 
-        <div class="card-icon darkblue-icon">
+
+        <div class="
+          card-icon
+          icon-sky
+        ">
           W
         </div>
+
 
         <div class="card-number">
           04 / WRITING
         </div>
 
+
         <h3>
           英作文
         </h3>
 
+
         <p>
+
           和文英訳から自由英作文まで、
           入試で得点できる英語表現を学びます。
+
         </p>
+
 
         <span class="coming-soon">
           COMING SOON
         </span>
 
+
       </div>
 
 
+
+      <!-- 大学別 -->
+
       <div class="card">
 
-        <div class="card-icon orange-icon">
+
+        <div class="
+          card-icon
+          icon-orange
+        ">
           E
         </div>
+
 
         <div class="card-number">
           05 / EXAM
         </div>
 
+
         <h3>
           大学別入試対策
         </h3>
 
+
         <p>
+
           実際の入試問題を題材に、
-          大学ごとの出題傾向と攻略法を考えます。
+          大学ごとの出題傾向と
+          攻略法を考えます。
+
         </p>
+
 
         <span class="coming-soon">
           COMING SOON
         </span>
 
+
       </div>
 
 
+
+      <!-- 学習法 -->
+
       <div class="card">
 
-        <div class="card-icon blue-icon">
+
+        <div class="
+          card-icon
+          icon-blue
+        ">
           S
         </div>
+
 
         <div class="card-number">
           06 / STUDY
         </div>
 
+
         <h3>
           英語学習法
         </h3>
 
+
         <p>
+
           単語・参考書・復習・学習計画など、
           合格につながる勉強の進め方を考えます。
+
         </p>
+
 
         <span class="coming-soon">
           COMING SOON
         </span>
 
+
       </div>
 
 
     </div>
+
 
   </div>
 
@@ -1148,53 +1687,342 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      ABOUT
-========================= -->
+======================================== -->
 
 <section id="about">
 
   <div class="container">
+
 
     <div class="about-layout">
 
 
       <div>
 
+
         <div class="section-label">
           ABOUT EIUKA
         </div>
 
+
         <h2 class="about-title">
 
           英語は、<br>
+
           志望校合格の<br>
-          <span>武器になる。</span>
+
+          <span>
+            武器になる。
+          </span>
 
         </h2>
+
 
       </div>
 
 
+
       <div class="about-text">
 
+
         <p>
+
           大学受験英語は、
-          単語や文法を覚えるだけでは突破できません。
+          単語や文法を覚えるだけでは
+          突破できません。
+
         </p>
 
+
         <p>
+
           英文の構造を正確に理解する力。
+
           長文の論理を追う力。
+
           自分の考えを英語で表現する力。
+
         </p>
 
+
         <p>
+
           それらを体系的に身につけることで、
           英語は単なる受験科目ではなく、
-          <strong>志望校合格を引き寄せる武器</strong>になります。
+
+          <strong>
+            志望校合格を引き寄せる武器
+          </strong>
+
+          になります。
+
         </p>
 
+
         <p>
+
           EIUKAでは、
-          大学受験に
+          大学受験に挑む高校生・受験生のために、
+
+          英語の解説・講義・演習教材を
+          無料で公開していきます。
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FREE MATERIALS
+======================================== -->
+
+<section id="materials">
+
+  <div class="container">
+
+
+    <div class="materials-box">
+
+
+      <div class="materials-label">
+        FREE MATERIALS
+      </div>
+
+
+      <h2>
+        無料で学べる大学受験英語教材
+      </h2>
+
+
+      <p>
+
+        英文法・英文解釈・長文読解・英作文など、
+
+        大学受験に取り組む高校生・受験生が
+        使える教材を順次無料で公開していきます。
+
+        学校や塾に関係なく、
+        誰でも利用できます。
+
+      </p>
+
+
+      <a
+        href="#learn"
+        class="materials-button"
+      >
+        無料教材を見る
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     PRIVATE LESSON
+======================================== -->
+
+<section id="lesson">
+
+  <div class="container">
+
+
+    <div class="lesson-layout">
+
+
+      <div>
+
+
+        <div class="section-label">
+          ONLINE PRIVATE LESSON
+        </div>
+
+
+        <h2 class="lesson-title">
+          オンライン個別指導
+        </h2>
+
+
+        <p class="lesson-text">
+
+          EIUKAでは、
+          無料コンテンツだけでは
+          解決しにくい課題について、
+
+          一人ひとりの志望校・現在の学力に合わせた
+          オンライン個別指導を予定しています。
+
+        </p>
+
+
+        <ul class="lesson-list">
+
+          <li>
+            英文解釈・長文読解の個別指導
+          </li>
+
+          <li>
+            和訳・英作文答案の添削
+          </li>
+
+          <li>
+            志望大学に合わせた入試対策
+          </li>
+
+          <li>
+            英語学習の課題分析
+          </li>
+
+          <li>
+            学習計画・参考書選びの相談
+          </li>
+
+        </ul>
+
+
+      </div>
+
+
+
+      <div class="lesson-box">
+
+
+        <span class="lesson-status">
+          PREPARING
+        </span>
+
+
+        <h3>
+          個別指導について
+        </h3>
+
+
+        <p>
+          現在、
+          正式なサービス開始に向けて
+          準備中です。
+        </p>
+
+
+        <p>
+          対象・料金・指導方法などの詳細は、
+          今後このサイトで公開します。
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     MESSAGE
+======================================== -->
+
+<section class="message">
+
+  <div class="container">
+
+
+    <h2>
+
+      英語を、
+
+      <span>
+        合格の武器
+      </span>
+
+      に。
+
+    </h2>
+
+
+    <p>
+
+      英語が得意な人にも、
+      まだ苦手意識がある人にも。
+
+      正しく学び、
+      正しく使えるようになれば、
+
+      英語は大学受験の
+      大きな武器になります。
+
+    </p>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+
+    <div class="footer-logo">
+
+      <span>
+        EI
+      </span>UKA
+
+    </div>
+
+
+    <div>
+      英語で合格るオンライン受験塾
+    </div>
+
+
+    <p class="footer-tagline">
+      英語を武器に志望校へ。
+    </p>
+
+
+    <div class="copyright">
+      © 2026 EIUKA
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
