@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    英文法｜EIUKA
+  </title>
+
+  <meta
+    name="description"
+    content="EIUKAの大学受験英文法ページです。単元別解説とランダム演習から学習方法を選べます。"
+  >
+
+  <style>
+
+    /* ========================================
+       基本設定
+    ======================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --orange: #ff6f18;
+      --orange-dark: #e85c00;
+      --orange-light: #fff2e7;
+
+      --blue: #2110ba;
+      --blue-dark: #160a88;
+      --blue-light: #f3f1ff;
+
+      --black: #202024;
+      --gray: #66666f;
+      --light-gray: #f8f8fa;
+
+      --border: #e8e8ed;
+    }
+
+    body {
+      width: 100%;
+      overflow-x: hidden;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+
+      color: var(--black);
+      background: #ffffff;
+
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+
+    /* ========================================
+       HEADER
+    ======================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,0.97);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      width: 100%;
+      max-width: 1240px;
+
+      height: 92px;
+
+      margin: 0 auto;
+      padding: 0 30px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+
+      flex-shrink: 0;
+    }
+
+    .header-logo img {
+      display: block;
+
+      width: 300px;
+      max-width: 100%;
+
+      height: auto;
+      max-height: 78px;
+
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .nav-menu {
+      list-style: none;
+
+      display: flex;
+      align-items: center;
+
+      gap: 34px;
+    }
+
+    .nav-menu a {
+      font-size: 15px;
+      font-weight: 700;
+
+      color: #303036;
+
+      transition: 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--orange);
+    }
+
+    .nav-menu .lesson-link {
+      padding: 11px 21px;
+
+      border-radius: 10px;
+
+      color: #ffffff;
+
+      background: var(--orange);
+    }
+
+    .nav-menu .lesson-link:hover {
+      color: #ffffff;
+
+      background: var(--orange-dark);
+    }
+
+
+
+    /* ========================================
+       GRAMMAR HERO
+    ======================================== */
+
+    .grammar-hero {
+      width: 100%;
+
+      padding: 92px 32px 54px;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 18% 20%,
+          rgba(255,111,24,0.13),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 82% 70%,
+          rgba(33,16,186,0.10),
+          transparent 32%
+        ),
+
+        linear-gradient(
+          120deg,
+          #ffffff 0%,
+          #fffaf6 52%,
+          #f7f5ff 100%
+        );
+    }
+
+    .grammar-hero-inner {
+      width: 100%;
+      max-width: 900px;
+
+      margin: 0 auto;
+    }
+
+    .grammar-label {
+      margin-bottom: 10px;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      letter-spacing: 0.18em;
+
+      color: var(--orange);
+    }
+
+    .grammar-title {
+      margin-bottom: 18px;
+
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.25;
+
+      color: var(--blue-dark);
+    }
+
+    .grammar-description {
+      max-width: 720px;
+
+      margin: 0 auto;
+
+      color: var(--gray);
+
+      font-size: 17px;
+      line-height: 2;
+    }
+
+
+
+    /* ========================================
+       CHOICE
+    ======================================== */
+
+    .choice-section {
+      width: 100%;
+
+      padding: 78px 32px 110px;
+
+      background: #ffffff;
+    }
+
+    .choice-container {
+      width: 100%;
+      max-width: 1080px;
+
+      margin: 0 auto;
+    }
+
+    .choice-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 28px;
+    }
+
+    .choice-card {
+      min-height: 360px;
+
+      padding: 46px 40px;
+
+      display: flex;
+      flex-direction: column;
+
+      border-radius: 22px;
+
+      transition: 0.25s;
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    .choice-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .choice-card::after {
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+      height: 220px;
+
+      right: -75px;
+      bottom: -90px;
+
+      border-radius: 50%;
+    }
+
+    .choice-card-lesson {
+      background:
+        linear-gradient(
+          145deg,
+          #fff7f0,
+          #fffdfb
+        );
+
+      border: 1px solid #ffd8bd;
+
+      box-shadow:
+        0 14px 40px
+        rgba(255,111,24,0.08);
+    }
+
+    .choice-card-lesson::after {
+      background:
+        rgba(255,111,24,0.09);
+    }
+
+    .choice-card-practice {
+      background:
+        linear-gradient(
+          145deg,
+          #f5f3ff,
+          #fdfcff
+        );
+
+      border: 1px solid #dcd7ff;
+
+      box-shadow:
+        0 14px 40px
+        rgba(33,16,186,0.07);
+    }
+
+    .choice-card-practice::after {
+      background:
+        rgba(33,16,186,0.08);
+    }
+
+    .choice-number {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 18px;
+
+      font-size: 12px;
+      font-weight: 900;
+
+      letter-spacing: 0.14em;
+    }
+
+    .choice-card-lesson .choice-number {
+      color: var(--orange);
+    }
+
+    .choice-card-practice .choice-number {
+      color: var(--blue);
+    }
+
+    .choice-title {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 16px;
+
+      font-size: clamp(29px, 4vw, 38px);
+      line-height: 1.4;
+    }
+
+    .choice-card-lesson .choice-title {
+      color: var(--orange-dark);
+    }
+
+    .choice-card-practice .choice-title {
+      color: var(--blue-dark);
+    }
+
+    .choice-text {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 34px;
+
+      color: #62626b;
+
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .choice-button {
+      position: relative;
+      z-index: 2;
+
+      margin-top: auto;
+
+      width: fit-content;
+
+      padding: 13px 22px;
+
+      display: inline-flex;
+      align-items: center;
+
+      gap: 12px;
+
+      border-radius: 9px;
+
+      font-size: 14px;
+      font-weight: 900;
+
+      transition: 0.2s;
+    }
+
+    .choice-card-lesson .choice-button {
+      color: #ffffff;
+
+      background: var(--orange);
+    }
+
+    .choice-card-lesson:hover .choice-button {
+      background: var(--orange-dark);
+    }
+
+    .choice-card-practice .choice-button {
+      color: #ffffff;
+
+      background: var(--blue);
+    }
+
+    .choice-card-practice:hover .choice-button {
+      background: var(--blue-dark);
+    }
+
+
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      width: 100%;
+
+      padding: 58px 32px;
+
+      background: #171337;
+
+      color: #c7c5dc;
+    }
+
+    .footer-inner {
+      width: 100%;
+      max-width: 1180px;
+
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      margin-bottom: 7px;
+
+      font-size: 31px;
+      font-weight: 900;
+
+      letter-spacing: 4px;
+
+      color: #ffffff;
+    }
+
+    .footer-tagline {
+      color: #eeeef4;
+    }
+
+    .copyright {
+      margin-top: 30px;
+
+      color: #85819e;
+
+      font-size: 12px;
+    }
+
+
+
+    /* ========================================
+       タブレット
+    ======================================== */
+
+    @media (max-width: 900px) {
+
+      .header-inner {
+        height: 78px;
+
+        padding: 0 18px;
+      }
+
+      .header-logo img {
+        width: 215px;
+        max-width: 55vw;
+
+        max-height: 65px;
+      }
+
+      .nav-menu {
+        gap: 15px;
+      }
+
+      .nav-menu li:not(:last-child) {
+        display: none;
+      }
+
+      .nav-menu .lesson-link {
+        padding: 8px 14px;
+
+        font-size: 12px;
+      }
+
+      .grammar-hero {
+        padding: 72px 22px 45px;
+      }
+
+      .choice-section {
+        padding: 60px 22px 85px;
+      }
+
+      .choice-grid {
+        gap: 22px;
+      }
+
+      .choice-card {
+        min-height: 330px;
+
+        padding: 38px 30px;
+      }
+
+    }
+
+
+
+    /* ========================================
+       スマホ
+    ======================================== */
+
+    @media (max-width: 600px) {
+
+      .header-inner {
+        height: 64px;
+
+        padding: 0 12px;
+      }
+
+      .header-logo {
+        min-width: 0;
+      }
+
+      .header-logo img {
+        width: 150px;
+        max-width: 50vw;
+
+        height: auto;
+      }
+
+      .nav-menu .lesson-link {
+        padding: 7px 11px;
+
+        font-size: 11px;
+      }
+
+      .grammar-hero {
+        padding: 58px 18px 38px;
+      }
+
+      .grammar-description {
+        font-size: 14px;
+
+        line-height: 1.9;
+      }
+
+      .choice-section {
+        padding: 45px 18px 70px;
+      }
+
+      .choice-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+      .choice-card {
+        min-height: 285px;
+
+        padding: 32px 25px;
+
+        border-radius: 17px;
+      }
+
+      .choice-title {
+        font-size: 28px;
+      }
+
+      .choice-text {
+        margin-bottom: 26px;
+
+        font-size: 14px;
+      }
+
+      .choice-button {
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 12px 18px;
+      }
+
+      footer {
+        padding: 48px 22px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a
+      href="index.html"
+      class="header-logo"
+    >
+
+      <img
+        src="eiuka-header.png"
+        alt="EIUKA 英語で合格るオンライン受験塾"
+      >
+
+    </a>
+
+
+    <ul class="nav-menu">
+
+      <li>
+        <a href="index.html#learn">
+          学ぶ
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html#materials">
+          無料教材
+        </a>
+      </li>
+
+      <li>
+        <a href="index.html#about">
+          EIUKAについて
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="index.html#lesson"
+          class="lesson-link"
+        >
+          個別指導
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ========================================
+     GRAMMAR HERO
+======================================== -->
+
+<section class="grammar-hero">
+
+  <div class="grammar-hero-inner">
+
+    <div class="grammar-label">
+      GRAMMAR
+    </div>
+
+    <h1 class="grammar-title">
+      英文法
+    </h1>
+
+    <p class="grammar-description">
+      学びたい内容に合わせて、<br>
+      学習方法を選んでください。
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================
+     CHOICE
+======================================== -->
+
+<section class="choice-section">
+
+  <div class="choice-container">
+
+    <div class="choice-grid">
+
+
+      <!-- 単元別解説 -->
+
+      <a
+        href="grammar-lessons.html"
+        class="choice-card choice-card-lesson"
+      >
+
+        <div class="choice-number">
+          01 / LESSON
+        </div>
+
+        <h2 class="choice-title">
+          単元別解説
+        </h2>
+
+        <p class="choice-text">
+          時制・助動詞・不定詞・関係詞など、<br>
+          大学受験英文法を単元ごとに<br>
+          基礎から体系的に学びます。
+        </p>
+
+        <span class="choice-button">
+          単元を選ぶ
+          <span>›</span>
+        </span>
+
+      </a>
+
+
+
+      <!-- ランダム演習 -->
+
+      <a
+        href="grammar-practice.html"
+        class="choice-card choice-card-practice"
+      >
+
+        <div class="choice-number">
+          02 / PRACTICE
+        </div>
+
+        <h2 class="choice-title">
+          ランダム演習
+        </h2>
+
+        <p class="choice-text">
+          さまざまな文法分野から出題される問題に挑戦し、<br>
+          英文法の理解度と実戦力を確認します。
+        </p>
+
+        <span class="choice-button">
+          演習に挑戦する
+          <span>›</span>
+        </span>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-logo">
+      <strong>EIUKA</strong>
+    </div>
+
+    <div>
+      英語で合格るオンライン受験塾
+    </div>
+
+    <p class="footer-tagline">
+      英語を武器に志望校へ。
+    </p>
+
+    <div class="copyright">
+      © 2026 EIUKA
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
