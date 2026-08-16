@@ -157,7 +157,10 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
-
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
     .card {
       background: white;
       padding: 30px;
@@ -291,14 +294,16 @@
 
       <div class="cards">
 
-        <div class="card">
-          <div class="card-number">ARTICLE 01</div>
-          <h3>英文をどう読むか</h3>
-          <p>
-            単語を日本語に置き換えるだけではなく、
-            英文の構造を捉えて読むための考え方。
-          </p>
-        </div>
+<a href="article01.html" class="card-link">
+  <div class="card">
+    <div class="card-number">ARTICLE 01</div>
+    <h3>英文をどう読むか</h3>
+    <p>
+      単語を日本語に置き換えるだけではなく、
+      英文の構造を捉えて読むための考え方。
+    </p>
+  </div>
+</a>
 
         <div class="card">
           <div class="card-number">ARTICLE 02</div>
